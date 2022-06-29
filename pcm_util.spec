@@ -1,7 +1,7 @@
 ### RPM external pcm_util 1.0
 
 Source: none 
-Requires: root clhep tinyxml2 boost fftw3 cuda python3 hepmc tbb gcc py3-pybind11 fmt xerces-c dd4hep 
+Requires: root clhep tinyxml2 boost fftw3 cuda python3 hepmc tbb gcc py3-pybind11 fmt xerces-c dd4hep hls
 
 %prep
 
@@ -20,6 +20,7 @@ TINYXML2_MM_NAME="tinyxml2.modulemap"
 CUDA_MM_NAME="cuda.modulemap"
 HEPMC_MM_NAME="hepmc.modulemap"
 BOOST_MM_NAME="boost.modulemap"
+HLS_MM_NAME="hls.modulemap"
 
 PYBIND11_INCDIR="${PYTHON3_LIB_SITE_PACKAGES}/pybind11/include"
 
@@ -44,7 +45,7 @@ function check_var() {
    fi
 }
 
-packlist="tbb pybind11 clhep tinyxml2 cuda HepMC fmt xercesc dd4hep boost"
+packlist="tbb pybind11 clhep tinyxml2 cuda HepMC fmt xercesc dd4hep boost hls"
 for mod in $packlist
 do
     modpack="$(echo "${mod}_MODPACK" | tr [a-z] [A-Z])"
@@ -73,6 +74,6 @@ done
 mkdir %{i}/lib
 rm -f Dummy*.pcm
 rm -f libDummy*.pcm
-packlist="tbb pybind11 clhep tinyxml2 cuda HepMC fmt xercesc dd4hep boost"
+packlist="tbb pybind11 clhep tinyxml2 cuda HepMC fmt xercesc dd4hep boost hls"
 cp -r $packlist %{i}/lib/.
 
