@@ -140,6 +140,7 @@ DataFormatsL1TCorrelator_CXXMODULES:=1
 DataFormatsL1TGlobal_CXXMODULES:=1
 DataFormatsL1THGCal_CXXMODULES:=1
 DataFormatsL1TMuon_CXXMODULES:=1
+DataFormatsL1TMuonPhase2_CXXMODULES:=1
 DataFormatsL1TParticleFlow_CXXMODULES:=1
 DataFormatsL1TrackTrigger_CXXMODULES:=1
 DataFormatsL1Trigger_CXXMODULES:=1
